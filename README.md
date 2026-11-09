@@ -1,26 +1,39 @@
 # Goal-programming-bakery-production-optimization
 MATLAB implementation of a goal programming model for bakery production planning, balancing profit, cost, and overtime priorities in a real-world case study.
-# Application of Goal Programming Model: Bakery Production Case Study
+# Bakery Production Planning with Goal Programming
 
-This project applies goal programming in MATLAB to a bakery production planning problem. The model considers weekly production of bread and buns while balancing profit, cost, and overtime priorities.
+A MATLAB based operations research project that applies goal programming to a weekly production planning case study for Food Art (Pvt) Ltd, a bakery products company.
 
-## Project objectives
+## Project Overview
 
-The model aims to:
+The model determines weekly production quantities for bread and buns while considering several management goals. Since these goals may compete with one another, the model represents them using deviation variables and solves the resulting linear programming formulation with MATLAB's `linprog` function.
 
-1. Meet the target for weekly profit.
-2. Keep total weekly costs within the specified limit.
-3. Avoid overtime for packing.
-4. Avoid overtime for baking.
+## Goals Considered
 
-## Method
+- Achieve the target weekly profit.
+- Keep total weekly production costs within the specified limit.
+- Minimize packing overtime.
+- Minimize baking overtime.
 
-The weekly quantities of bread and buns are the decision variables. Goal programming represents each target with deviation variables and uses MATLAB's `linprog` function to find a production plan based on the stated priorities.
+## Model Components
 
-## Run the MATLAB code
+- **Decision variables:** Weekly quantities of bread and buns.
+- **Goal constraints:** Profit, production cost, packing hours, and baking hours.
+- **Solution method:** Goal programming formulated as a linear programming problem and solved in MATLAB.
+
+## Repository Contents
+
+- `Goal Programming.m` — MATLAB script for the model.
+- `123.pdf` — Project report describing the case study, model, and results.
+
+## How to Run
 
 1. Download or clone this repository.
 2. Open `Goal Programming.m` in MATLAB.
 3. Run the script.
 
-The project report and MATLAB script are included in this repository.
+The script uses MATLAB's Optimization Toolbox, which provides the `linprog` function.
+
+## Scope
+
+This is an academic case study. The production recommendations depend on the data, assumptions, and goal structure used in the model.
